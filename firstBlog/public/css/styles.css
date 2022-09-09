@@ -2,19 +2,33 @@
     padding-top: 70px;
     padding-bottom: 70px;
 }
+#title{
+    color: azure;
+    font-weight: bolder;
+    font-size: large;
+}
 .navbar {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
     border: 1;
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: #aae0f3;
 }
 .navbar-nav  li a:hover {
-    color: #1abc9c !important;
+    color: #0023ff !important;
 }
-
+.navlink{
+    font-weight: bolder;
+    color: rgb(240, 6, 6);
+    background-color: rgb(247, 222, 222);
+    margin: 3px;
+}
+#home, #contact, #about{
+    padding-top: 2px;
+}
 .footer-padding {
 	padding-bottom: 60px;
 }
