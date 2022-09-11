@@ -1,4 +1,5 @@
 //jshint esversion:6
+require("dotenv").config()
 const bodyParser = require('body-parser');
 const express = require('express');
 const ejs =require("ejs");
@@ -17,9 +18,10 @@ const userSchema=new mongoose.Schema({
     email:String,
     password:String
 });
-const secret= "Anencryptionstring";
+const secret=process.env.API_KEY
 userSchema.plugin(encrypt,{secret:secret, encryptedFields:["password"]});
 const User= new mongoose.model("User",userSchema);
+
 
 
 app.get("/",function(req,res){
@@ -58,5 +60,5 @@ app.post("/register", function(req,res){
 
 
 app.listen(3000,function(){
-    console.log("server started")
+    console.log("server started Successfully")
 })
